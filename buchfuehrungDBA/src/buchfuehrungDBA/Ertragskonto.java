@@ -30,7 +30,7 @@ public class Ertragskonto {
     public double berechneKontosummer() {
         return 0;
     }
-    public double berechneSaldo() {
-        return 0;
+    public double berechneSaldo(double summeHabenbuchungen, double summeSollbuchungen) {
+        return summeHabenbuchungen - summeSollbuchungen ;
     }
 }
