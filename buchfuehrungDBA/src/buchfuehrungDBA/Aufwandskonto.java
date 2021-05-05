@@ -36,7 +36,5 @@ public double berechneKontosumme() {
     return 0;
 }
 
- public double berechneSaldo() {
-    return 0;
-}
+public double berechneSaldo(int summeSollbuchungen, int summeHabenbuchungen) { return summeSollbuchungen - summeHabenbuchungen; }
 }

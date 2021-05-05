@@ -32,7 +32,5 @@ public class Passivkonto {
     public double berechneKontosummer() {
         return 0;
     }
-    public double berechneSaldo() {
-        return 0;
-    }
+public double berechneSaldo(int anfangsbestand, int summeSollbuchungen, int summeHabenbuchungen) { return anfangsbestand + summeSollbuchungen - summeHabenbuchungen; }
 }
