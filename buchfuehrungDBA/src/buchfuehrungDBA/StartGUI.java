@@ -3,7 +3,7 @@ import java.util.ArrayList; // import the ArrayList class
 public class StartGUI extends javax.swing.JFrame {
 
     private ArrayList<String> kontenListe; 
-    private Buchungssatz einBuchungsatz = new Buchungssatz();
+    //private Buchungssatz einBuchungsatz = new Buchungssatz();
     private Konto einKonto = new Konto();
     
     public StartGUI() {
@@ -184,6 +184,19 @@ public class StartGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnKontoSuchenActionPerformed
 
     private void btnAlleKontenAnzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlleKontenAnzeigenActionPerformed
+        txbKontenverwaltungAusgabe.setText("");
+        kontenListe = new ArrayList<String>();
+    //Fake Daten
+        kontenListe.add("Konto1");
+        kontenListe.add("Konto2");
+        kontenListe.add("Konto3");
+        kontenListe.add("Konto4");
+    //
+    
+        for (int i = 0; i < kontenListe.size(); i++) { 
+            //txbKontenverwaltungAusgabe.append(kontenListe.get(i).ausgeben()); 
+            txbKontenverwaltungAusgabe.append(kontenListe.get(i)); 		
+        }   		
 
     }//GEN-LAST:event_btnAlleKontenAnzeigenActionPerformed
 
