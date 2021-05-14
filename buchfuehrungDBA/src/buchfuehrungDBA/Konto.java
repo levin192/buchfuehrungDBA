@@ -47,11 +47,13 @@ public class Konto {
     public int compareTo(konto einKonto) {
         return 0;
     }
-    public abstract double berechneKontosumme() {
+    
+/*    public abstract double berechneKontosumme() {
     return 0;
     }
 
     public abstract double berechneSaldo() {
     return 0;
-    }
+    } */
 }
+
