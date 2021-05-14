@@ -9,7 +9,7 @@ package buchfuehrungDBA;
  *
  * @author Levin
  */
-public class Aufwandskonto {
+public class Aufwandskonto extends Erfolgskonto {
 int konotNr;
 String kontoBezeichnung;
 double summSollbuchungen;
@@ -28,13 +28,16 @@ public void Aufwandskonto(int kontoNr, String kontoBezeichnung, double summeSoll
     this.summeHabenbuchungen = summeHabenbuchungen;
 }
 
+@Override
 public String ausgeben() {
     return "";
 }
 
+@Override
 public double berechneKontosumme() {
     return 0;
 }
 
-public double berechneSaldo(int summeSollbuchungen, int summeHabenbuchungen) { return summeSollbuchungen - summeHabenbuchungen; }
+@Override
+public double berechneSaldo() { return summeSollbuchungen - summeHabenbuchungen; }
 }
