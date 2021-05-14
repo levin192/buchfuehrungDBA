@@ -9,7 +9,7 @@ package buchfuehrungDBA;
  *
  * @author Levin
  */
-public class Passivkonto {
+public class Passivkonto extends Bestandskonto {
 
     public int kontroNr;
     public String kontoBezeichnung;
@@ -25,12 +25,17 @@ public class Passivkonto {
         this.summeHabenbuchungen = summeHabenbuchungen;
     }
 
+    @Override
     public String ausgeben() {
         return null;
     }
 
-    public double berechneKontosummer() {
+    @Override
+    public double berechneKontosumme() {
         return 0;
     }
-public double berechneSaldo(int anfangsbestand, int summeSollbuchungen, int summeHabenbuchungen) { return anfangsbestand + summeSollbuchungen - summeHabenbuchungen; }
+    @Override 
+    public double berechneSaldo() { 
+    return anfangsbestand + summeSollbuchungen - summeHabenbuchungen; 
+}
 }

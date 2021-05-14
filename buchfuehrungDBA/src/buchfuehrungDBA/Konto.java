@@ -9,7 +9,7 @@ package buchfuehrungDBA;
  *
  * @author Levin
  */
-public class Konto {
+public abstract class Konto {
     protected int kontoNr;
     protected String kontoBezeichnung;
     protected double summeSollbuchungen;
@@ -44,16 +44,11 @@ public class Konto {
         return "";
     }
 
-    public int compareTo(konto einKonto) {
+    public int compareTo(Konto einKonto) {
         return 0;
     }
-    
-/*    public abstract double berechneKontosumme() {
-    return 0;
-    }
+    public abstract double berechneKontosumme();
 
-    public abstract double berechneSaldo() {
-    return 0;
-    } */
+    public abstract double berechneSaldo();
 }
 

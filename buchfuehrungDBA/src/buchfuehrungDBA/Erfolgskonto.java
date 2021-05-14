@@ -9,6 +9,6 @@ package buchfuehrungDBA;
  *
  * @author Gufäb
  */
-public class Erfolgskonto {
+public abstract class Erfolgskonto extends Konto {
     
 }

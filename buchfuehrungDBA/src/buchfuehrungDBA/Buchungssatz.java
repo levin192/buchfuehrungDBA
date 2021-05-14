@@ -7,8 +7,8 @@ package buchfuehrungDBA;
 
 /**
  *
- * @author Boran
+ * @author Levin
  */
-public abstract class Bestandskonto extends Konto {
-    protected double anfangsbestand;
+class Buchungssatz {
+    
 }

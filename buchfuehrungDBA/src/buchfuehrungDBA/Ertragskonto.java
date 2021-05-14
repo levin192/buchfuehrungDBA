@@ -9,7 +9,7 @@ package buchfuehrungDBA;
  *
  * @author Levin
  */
-public class Ertragskonto {
+public class Ertragskonto extends Erfolgskonto {
 
     public int kontroNr;
     public String kontoBezeichnung;
@@ -23,14 +23,17 @@ public class Ertragskonto {
         this.summeHabenbuchungen = summeHabenbuchungen;
     }
 
+    @Override
     public String ausgeben() {
         return null;
     }
 
-    public double berechneKontosummer() {
+    @Override
+    public double berechneKontosumme() {
         return 0;
     }
-    public double berechneSaldo(double summeHabenbuchungen, double summeSollbuchungen) {
+    @Override
+    public double berechneSaldo() {
         return summeHabenbuchungen - summeSollbuchungen ;
     }
 }

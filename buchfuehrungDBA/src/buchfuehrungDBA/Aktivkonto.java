@@ -9,8 +9,7 @@ package buchfuehrungDBA;
  *
  * @author Boran
  */
-public class Aktivkonto {
-
+public class Aktivkonto extends Bestandskonto {
     public Aktivkonto(int kontoNr, String kontoBezeichnung) {
 
     }
@@ -22,14 +21,17 @@ public class Aktivkonto {
     public Aktivkonto(int kontoNr, String kontoBezeichnung, double anfangsbestand, double summeSollbuchungen, double summeHabenbuchungen) {
 
     }
-
+    @Override
     public String ausgeben() {
         return "";
     }
-
+    @Override
     public double berechneKontosumme() {
         return 0;
     }
 
-public double berechneSaldo(int anfangsbestand, int summeSollbuchungen, int summeHabenbuchungen) { return anfangsbestand + summeSollbuchungen - summeHabenbuchungen; }
+    @Override
+    public double berechneSaldo() { 
+        return anfangsbestand + summeSollbuchungen - summeHabenbuchungen; 
+    }
 }
