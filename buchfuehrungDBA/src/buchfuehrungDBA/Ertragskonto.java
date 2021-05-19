@@ -11,10 +11,10 @@ package buchfuehrungDBA;
  */
 public class Ertragskonto extends Erfolgskonto {
 
-    public int kontroNr;
-    public String kontoBezeichnung;
-    public double summeSollbuchungen;
-    public double summeHabenbuchungen;
+    public int kontroNr; // SOLLTE VON KONTO KENNEN?
+
+    private String ausgabe;
+    
 
     public Ertragskonto(int kontroNr, String kontoBezeichnung, double anfangsbestand, double summeSollbuchungen, double summeHabenbuchungen) {
         this.kontroNr = kontroNr;
@@ -25,7 +25,12 @@ public class Ertragskonto extends Erfolgskonto {
 
     @Override
     public String ausgeben() {
-        return null;
+        ausgabe += String.format("%-21s %,15.2f │%-21s %,15.2f\n", "Summe Sollbuchungen", summeSollbuchungen, "Summe Habenbuchungen", summeHabenbuchungen);
+        ausgabe += String.format("%-21s %,15.2f │\n", "Saldo", berechneSaldo());
+        ausgabe += "──────────────────────────────────────┼──────────────────────────────────────\n";
+        ausgabe += String.format("%,37.2f │%,37.2f\n", berechneKontosumme(), berechneKontosumme());
+        ausgabe += "══════════════════════════════════════╧══════════════════════════════════════\n";
+        return ausgabe;
     }
 
     @Override
