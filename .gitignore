@@ -1,4 +1,6 @@
-/buchfuehrungDBA/nbproject
-/buchfuehrungDBA/nbproject/*
-/buchfuehrungDBA/build
-/buchfuehrungDBA/build/*
+/nbproject
+/nbproject/*
+/build
+/build/*
+*.mf
+*.xml
