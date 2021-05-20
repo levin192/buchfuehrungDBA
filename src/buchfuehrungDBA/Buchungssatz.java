@@ -9,6 +9,30 @@ package buchfuehrungDBA;
  *
  * @author Levin
  */
-class Buchungssatz {
-    
+public class Buchungssatz extends Konto {
+    protected Konto sollKonto;
+    protected Konto habenKonto;
+    protected double buchungsbetrag;
+
+    public void Buchungssatz(Konto sollKonto, Konto: habenKonto, double Buchungsbetrag) {
+    this.sollKonto = sollKonto;
+    this.habenKonto = habenKonto;
+    this.buchungsbetrag = buchungsbetrag;
+    }
+
+    public void Buchungssatz(Konto sollKonto, Konto: habenKonto, double Buchungsbetrag) {
+    }
+
+    public String buchungsDurchfuehren() {
+        return "";
+
+    }
+
+    public String buchungSollUndHaben() {
+        return "";
+    }
+
+    public String ausgeben() {
+        return "";
+    }
 }
