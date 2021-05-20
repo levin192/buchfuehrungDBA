@@ -30,7 +30,12 @@ public void Aufwandskonto(int kontoNr, String kontoBezeichnung, double summeSoll
 
 @Override
 public String ausgeben() {
-    return "";
+    ausgabe += String.format("%-21s %,15.2f │%-21s %,15.2f\n", "Summe Sollbuchungen", summeSollbuchungen, "Summe Habenbuchungen", summeHabenbuchungen);
+    ausgabe += String.format("                                      │%-21s %,15.2f\n", "Saldo", berechneSaldo());
+    ausgabe += "──────────────────────────────────────┼──────────────────────────────────────\n";
+    ausgabe += String.format("%,37.2f │%,37.2f\n", berechneKontosumme(), berechneKontosumme());
+    ausgabe += "══════════════════════════════════════╧══════════════════════════════════════\n";
+    return ausgabe;
 }
 
 @Override
