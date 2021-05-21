@@ -35,7 +35,8 @@ public class Ertragskonto extends Erfolgskonto {
 
     @Override
     public double berechneKontosumme() {
-        return 0;
+        double Kontosumme = (double) (summeHabenbuchungen);
+        return Kontosumme;
     }
     @Override
     public double berechneSaldo() {

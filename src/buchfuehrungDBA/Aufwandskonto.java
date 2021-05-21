@@ -40,7 +40,8 @@ public String ausgeben() {
 
 @Override
 public double berechneKontosumme() {
-    return 0;
+    double Kontosumme = (double) (summeSollbuchungen);
+    return Kontosumme;
 }
 
 @Override

@@ -32,7 +32,8 @@ public class Passivkonto extends Bestandskonto {
 
     @Override
     public double berechneKontosumme() {
-        return 0;
+        double Kontosumme = (double) (anfangsbestand + summeHabenbuchungen);
+        return Kontosumme;
     }
     @Override 
     public double berechneSaldo() { 
