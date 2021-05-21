@@ -41,7 +41,7 @@ public abstract class Konto {
     }
 
     public String ausgeben() {
-        return "";
+        return String.format("%-33s %04d %-21s %15s\n", "Soll", kontoNr, kontoBezeichnung, "Haben")+ "──────────────────────────────────────┬──────────────────────────────────────\n";
     }
 
     public int compareTo(Konto einKonto) {
