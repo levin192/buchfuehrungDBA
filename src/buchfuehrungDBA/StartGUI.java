@@ -203,7 +203,12 @@ public class StartGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnKontoLoeschenActionPerformed
 
     private void btnKontoSuchenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKontoSuchenActionPerformed
-
+        einKonto = findeKonto(Integer.parseInt(txtKontoNr.getText()));
+        if (einKonto == null) {
+            this.txbKontenverwaltungAusgabe.setText('Konto mit dieser Kontonummer nicht gefunden.');
+        } else {
+            this.txbKontenverwaltungAusgabe.setText(this.einKonto.ausgeben());
+        }
     }//GEN-LAST:event_btnKontoSuchenActionPerformed
 
     private void btnAlleKontenAnzeigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlleKontenAnzeigenActionPerformed
