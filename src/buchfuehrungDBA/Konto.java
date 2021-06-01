@@ -33,13 +33,12 @@ public abstract class Konto {
     }
 
     public void bucheSoll(double buchungsbetrag) {
-
+        summeSollbuchungen = summeSollbuchungen + buchungsbetrag;
     }
 
     public void bucheHaben(double buchungsbetrag) {
-
+     summeHabenbuchungen = summeHabenbuchungen + buchungsbetrag;
     }
-
     public String ausgeben() {
         return String.format("%-33s %04d %-21s %15s\n", "Soll", kontoNr, kontoBezeichnung, "Haben")+ "──────────────────────────────────────┬──────────────────────────────────────\n";
     }
