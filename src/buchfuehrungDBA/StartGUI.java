@@ -1,7 +1,6 @@
 package buchfuehrungDBA;
 import java.util.ArrayList; // import the ArrayList class
 public class StartGUI extends javax.swing.JFrame {
-
     private ArrayList<String> kontenListe; 
     //private Buchungssatz einBuchungsatz = new Buchungssatz();
     private Konto einKonto = new Konto();
@@ -225,7 +224,49 @@ public class StartGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAlleKontenAnzeigenActionPerformed
 
     private void btnKontoAnlegenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKontoAnlegenActionPerformed
+        int kontoNr = Integer.parseInt(txtKontoNr.getText());
+        String ausgabe = '';
+        String kontoBezeichung = txtKontoBezeichnung.getText();
 
+        if(findeKonto(kontoNr) == null){
+
+            if(!kontoBezeichung.equals('')) {
+
+                if(kontoNr >= 0 && kontoNr <= 2999){
+
+                    Aktivkonto konto = new Aktivkonto(kontoNr, kontoBezeichung);
+                    kontenliste.add(konto);
+                    ausgabe = konto.ausgeben();
+
+                } else if(kontoNr >= 3000 && kontoNr <= 4999) {
+                    Passivkonto konto = new Passivkonto(kontoNr, kontoBezeichung);
+                    kontenliste.add(konto);
+                    ausgabe = konto.ausgeben();
+
+                } else if(kontoNr >= 5000 && kontoNr <= 5999){
+                    Ertragskonto konto = new Ertragskonto(kontoNr, kontoBezeichung);
+                    kontenliste.add(konto);
+                    ausgabe = konto.ausgeben();
+
+                } else if(kontoNr >= 6000 && kontoNr <= 7999){
+                    Aufwandskonto konto = new Aufwandskonto(kontoNr, kontoBezeichung);
+                    kontenliste.add(konto);
+                    ausgabe = konto.ausgeben();
+
+                } else {
+                    ausgabe = 'Kein Konto angelegt: Kein Konto mit dieser nummer.';
+
+                }
+            } else {
+                ausgabe =  'Bitte Kontobezeichnung eingeben.';
+
+            }
+        } else {
+            ausgabe = 'Kein Konto angelegt: Konto mit dieser Nummer bereits vorhanden.';
+
+        }
+        aktualisiereComboboxen(); 
+        txbKontenverwaltungAusgabe.setText(ausgabe);
     }//GEN-LAST:event_btnKontoAnlegenActionPerformed
 
     /**
