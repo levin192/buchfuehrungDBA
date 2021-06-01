@@ -8,6 +8,29 @@ public class StartGUI extends javax.swing.JFrame {
     
     public StartGUI() {
         initComponents();
+        kontenListe = new ArrayList<String>();
+        kontenListe.add(einKonto = new Aktivkonto(700, "TA u. Maschinen", 263000.00));
+        kontenListe.add(einKonto = new Aktivkonto(800, "BGA", 157000.00));
+        kontenListe.add(einKonto = new Aktivkonto(2200, "Fertige Erzeugnisse", 240000.00));
+        kontenListe.add(einKonto = new Aktivkonto(2400, "Forderungen aLL", 21000.00, 2500.00, 4000.00));
+        kontenListe.add(einKonto = new Aktivkonto(2800, "Bank", 28000.00, 5000.00, 2500.00));
+        kontenListe.add(einKonto = new Aktivkonto(2880, "Kasse", 9000.00, 3500.00, 4500.00));
+
+        kontenListe.add(einKonto = new Passivkonto(3000, "Eigenkapital", 326000.00));
+        kontenListe.add(einKonto = new Passivkonto(4250, "Darlehensschulden", 163000.00));
+        kontenListe.add(einKonto = new Passivkonto(4400, "Verbindlichk. aLL", 13000.00));
+
+        kontenListe.add(einKonto = new Ertragskonto(5000, "Umsatzerl. f. Erzeugn."));
+        kontenListe.add(einKonto = new Ertragskonto(5100, "Umsatzerl. f. Waren"));
+
+        kontenListe.add(einKonto = new Aufwandskonto(6000, "Aufw. f. Rohstoffe"));
+        kontenListe.add(einKonto = new Aufwandskonto(6010, "Aufw. f. Vorprodukte"));
+        kontenListe.add(einKonto = new Aufwandskonto(6200, "Löhne"));
+        kontenListe.add(einKonto = new Aufwandskonto(6300, "Gehälter"));
+        kontenListe.add(einKonto = new Aufwandskonto(6520, "Abschr. auf Sachanl."));
+        
+        aktualisiereComboboxen();
+    //
     }
     
     public void aktualisiereComboboxen() {};
@@ -187,11 +210,7 @@ public class StartGUI extends javax.swing.JFrame {
         txbKontenverwaltungAusgabe.setText("");
         kontenListe = new ArrayList<String>();
     //Fake Daten
-        kontenListe.add("Konto1");
-        kontenListe.add("Konto2");
-        kontenListe.add("Konto3");
-        kontenListe.add("Konto4");
-    //
+   
     
         for (int i = 0; i < kontenListe.size(); i++) { 
             //txbKontenverwaltungAusgabe.append(kontenListe.get(i).ausgeben()); 
